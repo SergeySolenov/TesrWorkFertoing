@@ -20,11 +20,12 @@ public class PublicPageTest extends BaseTest {
     public void fillFormTest() {
         log.info("Открываем нужную страницу");
         PublicPage publicPage = new PublicPage(PropsReader.getProperty("URL"));
-        log.info("Открываем нужную страницу");
+        log.info("Переходим в форму заполнения");
         publicPage.clickAndSwap();
+        log.info("Заполняем поля и соглашаемся с условиями");
         publicPage.sendData();
+        log.info("Проверяем что нужные кнопки активны");
         publicPage.checkResults();
-
 
     }
 }
